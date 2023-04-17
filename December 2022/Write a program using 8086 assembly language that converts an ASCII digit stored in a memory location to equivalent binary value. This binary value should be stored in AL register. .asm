@@ -1,10 +1,21 @@
-ORG 100h          ; set the origin of the program
+;Q1 . h 
+;Write a program using 8086 assembly
+;language that converts an ASCII digit
+;stored in a memory location to equivalent
+;binary value. This binary value should be
+;stored in AL register
 
-MOV AH, 00h       ; clear AH register
-MOV SI, OFFSET input ; load the memory location of input into SI register
-MOV AL, [SI]      ; load the ASCII digit into AL register
-SUB AL, 30h       ; convert ASCII digit to binary value by subtracting 30h (ASCII code for '0')
 
-RET               ; return from the program
-
-input DB '5'      ; example input digit1
+;This fucking assembly program coverts ASCII to binary
+.model small
+.stack 100h
+.data
+    digit db '9' ;ASCII digit
+.code
+    mov ax, @data   ;Initiating data segment
+    mov ds,ax
+    mov al,[digit]  ;move ASCII digit to al register
+    sub al,30h      ;subtracting 30h for binary value
+    mov al,4ch      ;DOS fucntion to terminate
+    int 21h         ;call DOS
+end
