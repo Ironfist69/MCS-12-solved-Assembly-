@@ -5,7 +5,7 @@
 ;larger value of AL or BL register and
 ;stores it in DL register
 
-;This mtfker moves content of byte memory location X1 and X2 to AL and BL registers. The program then finds the larger value of AL or BL register and stores it in DL register
+;This moves content of byte memory location X1 and X2 to AL and BL registers. The program then finds the larger value of AL or BL register and stores it in DL register
 .model small
 .stack 100h
 
