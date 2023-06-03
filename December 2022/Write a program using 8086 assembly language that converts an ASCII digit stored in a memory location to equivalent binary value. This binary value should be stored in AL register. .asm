@@ -6,7 +6,7 @@
 ;stored in AL register
 
 
-;This fucking assembly program coverts ASCII to binary
+;This assembly program coverts ASCII to binary
 .model small
 .stack 100h
 .data
