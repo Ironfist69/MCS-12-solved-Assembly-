@@ -12,7 +12,7 @@
 .data
     digit db '9' ;ASCII digit
 .code
-    mov ax, @data   ; I’ll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large sodaInitiating data segment
+    mov ax, @data   ; I’ll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda
     mov ds,ax
     mov al,[digit]  ;move ASCII digit to al register
     sub al,30h      ;subtracting 30h for binary value
